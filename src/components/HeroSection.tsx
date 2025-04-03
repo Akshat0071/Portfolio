@@ -50,7 +50,6 @@ const HeroSection = () => {
     "Cloud Computing Enthusiast",
     "MERN Stack Developer",
     "System Designer",
-    "DevOps Engineer"
   ];
   
   useEffect(() => {
