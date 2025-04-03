@@ -1,10 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 210 40% 98%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +92,100 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  code {
+    @apply font-mono;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24;
+  }
+
+  .section-title {
+    @apply font-heading text-3xl md:text-4xl font-bold mb-8 text-center;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-portfolio-blue to-portfolio-purple text-transparent bg-clip-text;
+  }
+  
+  .nav-link {
+    @apply transition-colors duration-200 hover:text-portfolio-blue dark:hover:text-portfolio-cyan relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute w-0 h-0.5 bg-portfolio-blue dark:bg-portfolio-cyan left-0 -bottom-1 transition-all duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .skill-icon {
+    @apply bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm flex items-center justify-center hover:shadow-md transition-all duration-300;
+  }
+
+  .button-blue {
+    @apply bg-portfolio-blue hover:bg-opacity-90 focus:ring-2 focus:ring-portfolio-blue focus:ring-opacity-50 text-white font-medium py-2 px-6 rounded-md transition duration-200 inline-flex items-center justify-center;
+  }
+  
+  .button-outline {
+    @apply border-2 border-portfolio-blue hover:bg-portfolio-blue hover:text-white dark:hover:text-white text-portfolio-blue dark:text-portfolio-cyan dark:border-portfolio-cyan font-medium py-2 px-6 rounded-md transition duration-200 inline-flex items-center justify-center;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-200;
+  }
+}
+
+.type-container {
+  display: inline-block;
+}
+
+.typed-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+}
+
+.animated-skill {
+  transition: transform 0.3s ease-in-out;
+}
+
+.animated-skill:hover {
+  transform: translateY(-5px);
+}
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
