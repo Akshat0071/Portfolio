@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Github, Heart, Linkedin, Mail, Twitter } from 'lucide-react';
 
@@ -18,7 +17,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://linkedin.com/in/akshat-bansal" 
+                href="https://www.linkedin.com/in/akshat-bansal04/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
@@ -27,7 +26,7 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a 
-                href="https://github.com/akshat-bansal" 
+                href="https://github.com/Akshat0071" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
@@ -36,11 +35,11 @@ const Footer = () => {
                 <Github className="h-5 w-5" />
               </a>
               <a 
-                href="https://twitter.com/akshat-bansal" 
+                href="https://x.com/home" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
-                aria-label="Twitter Profile"
+                aria-label="X (Twitter) Profile"
               >
                 <Twitter className="h-5 w-5" />
               </a>

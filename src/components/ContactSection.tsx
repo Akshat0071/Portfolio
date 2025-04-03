@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -158,7 +157,7 @@ const ContactSection = () => {
               <h3 className="text-xl font-bold mb-4">Connect With Me</h3>
               <div className="flex space-x-4">
                 <a 
-                  href="https://linkedin.com/in/akshat-bansal" 
+                  href="https://www.linkedin.com/in/akshat-bansal04/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1"
@@ -167,7 +166,7 @@ const ContactSection = () => {
                   <Linkedin className="h-5 w-5 text-blue-600" />
                 </a>
                 <a 
-                  href="https://github.com/akshat-bansal" 
+                  href="https://github.com/Akshat0071" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1"
@@ -176,11 +175,11 @@ const ContactSection = () => {
                   <Github className="h-5 w-5" />
                 </a>
                 <a 
-                  href="https://twitter.com/akshat-bansal" 
+                  href="https://x.com/home" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1"
-                  aria-label="Twitter Profile"
+                  aria-label="X (Twitter) Profile"
                 >
                   <Twitter className="h-5 w-5 text-blue-400" />
                 </a>

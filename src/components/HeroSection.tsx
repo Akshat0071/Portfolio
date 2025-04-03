@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Download, Mail } from 'lucide-react';
@@ -74,8 +73,12 @@ const HeroSection = () => {
   }, []);
   
   const downloadResume = () => {
-    // In a real implementation, this would download the actual resume
-    alert("Resume download functionality will be implemented");
+    const link = document.createElement('a');
+    link.href = '/AkshatBansalResume.pdf';
+    link.download = 'Akshat_Bansal_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
   
   const scrollToContact = () => {
@@ -118,10 +121,11 @@ const HeroSection = () => {
         
         <div className="md:w-1/2 flex justify-center md:justify-end opacity-0 animate-fadeIn" style={{ animationDelay: '1.2s' }}>
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-portfolio-blue dark:border-portfolio-cyan shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-            {/* Replace with actual profile image */}
-            <div className="absolute inset-0 bg-gradient-to-br from-portfolio-blue to-portfolio-purple flex items-center justify-center text-white text-6xl font-bold">
-              AB
-            </div>
+            <img 
+              src="/akshat.jpg" 
+              alt="Akshat Bansal" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
