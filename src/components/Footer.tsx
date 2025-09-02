@@ -44,7 +44,7 @@ const Footer = () => {
                 <Twitter className="h-5 w-5" />
               </a>
               <a 
-                href="mailto:akshat.bansal@example.com" 
+                href="mailto:akshatbansal04@gmail.com" 
                 className="text-gray-400 hover:text-white transition-colors duration-200"
                 aria-label="Email"
               >
@@ -80,10 +80,10 @@ const Footer = () => {
               Baddi, Himachal Pradesh, India
             </p>
             <p className="text-gray-400 mb-2">
-              akshat.bansal@example.com
+              akshatbansal04@gmail.com
             </p>
             <p className="text-gray-400">
-              +91 98765 43210
+              +91 8219890171
             </p>
           </div>
         </div>
