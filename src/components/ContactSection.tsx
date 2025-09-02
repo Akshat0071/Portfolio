@@ -122,10 +122,10 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-medium mb-1">Email</h4>
                   <a 
-                    href="mailto:akshat.bansal@example.com" 
+                    href="mailto:akshatbansal04@gmail.com" 
                     className="text-portfolio-blue dark:text-portfolio-cyan hover:underline"
                   >
-                    akshat.bansal@example.com
+                    akshatbansal04@gmail.com
                   </a>
                 </div>
               </div>
@@ -136,7 +136,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Phone</h4>
-                  <p>+91 98765 43210</p>
+                  <p>+91 8219890171</p>
                 </div>
               </div>
               
@@ -185,92 +185,29 @@ const ContactSection = () => {
             </div>
           </div>
           
+          {/* Right column replaced: WhatsApp CTA instead of form */}
           <div className="opacity-0 animate-on-scroll" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-2xl font-bold mb-6 text-portfolio-blue dark:text-portfolio-cyan">
-              Send Me a Message
+              Chat on WhatsApp
             </h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block mb-2 font-medium">
-                  Name
-                </label>
-                <Input 
-                  id="name" 
-                  name="name" 
-                  value={formData.name}
-                  onChange={handleChange}
-                  className={errors.name ? 'border-red-500' : ''}
-                  placeholder="Your name"
-                />
-                {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block mb-2 font-medium">
-                  Email
-                </label>
-                <Input 
-                  id="email" 
-                  name="email" 
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className={errors.email ? 'border-red-500' : ''}
-                  placeholder="your.email@example.com"
-                />
-                {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block mb-2 font-medium">
-                  Subject
-                </label>
-                <Input 
-                  id="subject" 
-                  name="subject" 
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="What is this regarding?"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block mb-2 font-medium">
-                  Message
-                </label>
-                <Textarea 
-                  id="message" 
-                  name="message" 
-                  value={formData.message}
-                  onChange={handleChange}
-                  className={`min-h-32 ${errors.message ? 'border-red-500' : ''}`}
-                  placeholder="Your message here..."
-                />
-                {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
-              </div>
-              
-              <Button 
-                type="submit" 
-                className="w-full bg-portfolio-blue hover:bg-portfolio-blue/90"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  <>
-                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <MessageSquare className="mr-2 h-4 w-4" />
-                    Send Message
-                  </>
-                )}
-              </Button>
-            </form>
+            <p className="text-muted-foreground mb-6">
+              Prefer messaging? Reach me instantly on WhatsApp.
+            </p>
+            <a 
+              href="https://wa.me/918219890171" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-5 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-medium shadow-sm transition-all duration-200 hover:-translate-y-0.5"
+              aria-label="Message on WhatsApp"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 mr-2" aria-hidden="true">
+                <path d="M20.52 3.48A11.78 11.78 0 0012.06 0C5.45 0 .08 5.37.08 12c0 2.1.55 4.14 1.6 5.94L0 24l6.2-1.62A11.86 11.86 0 0012.06 24c6.62 0 12-5.37 12-12 0-3.2-1.25-6.2-3.54-8.52zM12.06 22.1c-1.88 0-3.72-.5-5.32-1.44l-.38-.22-3.68.96.98-3.58-.25-.38A9.9 9.9 0 012.02 12c0-5.52 4.52-10.02 10.04-10.02 2.7 0 5.24 1.06 7.16 2.98a9.88 9.88 0 012.92 7.06c0 5.52-4.5 10.08-10.08 10.08zm5.84-7.36c-.32-.16-1.88-.92-2.16-1.02-.28-.1-.48-.16-.68.16-.2.32-.78 1.02-.96 1.24-.18.22-.36.24-.68.08-.32-.16-1.34-.5-2.56-1.6-.94-.84-1.58-1.88-1.76-2.2-.18-.32-.02-.48.14-.64.14-.14.32-.36.48-.54.16-.18.2-.32.32-.54.1-.22.06-.4-.02-.56-.08-.16-.68-1.64-.94-2.26-.25-.6-.52-.52-.68-.52h-.58c-.2 0-.52.08-.8.4-.28.32-1.06 1.04-1.06 2.54s1.08 2.94 1.24 3.14c.16.2 2.16 3.28 5.24 4.6.74.32 1.32.52 1.78.66.74.24 1.42.2 1.96.12.6-.08 1.88-.76 2.16-1.5.28-.74.28-1.38.2-1.52-.08-.16-.28-.24-.6-.4z"/>
+              </svg>
+              Message me on WhatsApp
+            </a>
+            <p className="mt-3 text-sm text-muted-foreground">
+              WhatsApp: +91 8219890171
+            </p>
           </div>
         </div>
       </div>
