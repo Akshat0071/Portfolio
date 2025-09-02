@@ -2,13 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { toast } = useToast();
 
   useEffect(() => {
     // Check user preference
@@ -35,16 +34,14 @@ const Header = () => {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
       setIsDarkMode(false);
-      toast({
-        title: "Light mode activated!",
+      toast('Light mode activated!', {
         description: "The portfolio is now in light mode.",
       });
     } else {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
       setIsDarkMode(true);
-      toast({
-        title: "Dark mode activated!",
+      toast('Dark mode activated!', {
         description: "The portfolio is now in dark mode.",
       });
     }

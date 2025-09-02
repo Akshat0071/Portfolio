@@ -3,10 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Github, Linkedin, Mail, MapPin, MessageSquare, Phone, Twitter } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 
 const ContactSection = () => {
-  const { toast } = useToast();
   const sectionRef = useRef<HTMLDivElement>(null);
   
   const [formData, setFormData] = useState({
@@ -64,8 +63,7 @@ const ContactSection = () => {
       
       // Simulate form submission
       setTimeout(() => {
-        toast({
-          title: "Message Sent!",
+        toast('Message Sent!', {
           description: "Thank you for contacting me. I'll get back to you soon.",
         });
         

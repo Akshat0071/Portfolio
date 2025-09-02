@@ -1,12 +1,29 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Allow: /#/
+Disallow: /api/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://akshatbansal.dev/sitemap.xml
+
+# Crawl-delay: 10
+
+# Specific bot rules
 User-agent: Googlebot
 Allow: /
+Allow: /#/
 
 User-agent: Bingbot
 Allow: /
+Allow: /#/
 
 User-agent: Twitterbot
 Allow: /
+Allow: /#/
 
+# Facebook crawler
 User-agent: facebookexternalhit
 Allow: /
 

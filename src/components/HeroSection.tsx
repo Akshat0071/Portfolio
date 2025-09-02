@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Download, Mail } from 'lucide-react';
+import LazyImage from '@/components/ui/LazyImage';
 
 const TypedText = ({ texts }: { texts: string[] }) => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -74,8 +75,8 @@ const HeroSection = () => {
   
   const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/AkshatBansalResume.pdf';
-    link.download = 'Akshat_Bansal_Resume.pdf';
+    link.href = '/AkshatResumenew.pdf';
+    link.download = 'AkshatResumenew.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -95,7 +96,7 @@ const HeroSection = () => {
           <p className="text-lg md:text-xl text-portfolio-blue dark:text-portfolio-cyan mb-3 opacity-0 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
             Hello, I'm
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 opacity-0 animate-fadeIn" style={{ animationDelay: '0.4s' }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 opacity-0 animate-fadeIn whitespace-nowrap" style={{ animationDelay: '0.4s' }}>
             Akshat Bansal
           </h1>
           <div className="text-xl md:text-2xl font-medium mb-6 opacity-0 animate-fadeIn h-12" style={{ animationDelay: '0.6s' }}>
@@ -121,10 +122,13 @@ const HeroSection = () => {
         
         <div className="md:w-1/2 flex justify-center md:justify-end opacity-0 animate-fadeIn" style={{ animationDelay: '1.2s' }}>
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-portfolio-blue dark:border-portfolio-cyan shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-            <img 
-              src="/akshat.jpg" 
-              alt="Akshat Bansal" 
+            <img
+              src="/akshat.jpg"
+              alt="Akshat Bansal"
+              width={320}
+              height={320}
               className="w-full h-full object-cover"
+              loading="eager"
             />
           </div>
         </div>
